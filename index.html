@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rocket Listing — Privacy Policy & Terms</title>
+<meta name="description" content="Privacy Policy and Terms & Conditions for the Rocket Listing Chrome extension." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>" />
+<style>
+  :root{
+    --bg:#0b0f19;
+    --bg-soft:#111827;
+    --panel:#151b2c;
+    --border:#232b3d;
+    --text:#e7ebf5;
+    --text-dim:#9aa4b8;
+    --accent:#6d5bff;
+    --accent-soft:#221b45;
+    --success:#3ddc97;
+    --max:960px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:radial-gradient(1200px 600px at 50% -10%, #1a1440 0%, var(--bg) 55%) fixed;
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  a{color:var(--accent);}
+  header.hero{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:64px 24px 32px;
+    text-align:center;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--accent-soft);
+    color:#c9c2ff;
+    border:1px solid #362a7a;
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.02em;
+  }
+  h1{
+    font-size:clamp(28px,5vw,42px);
+    margin:20px 0 8px;
+    letter-spacing:-0.02em;
+  }
+  .sub{
+    color:var(--text-dim);
+    font-size:16px;
+    max-width:560px;
+    margin:0 auto;
+  }
+  nav.tabs{
+    position:sticky;
+    top:0;
+    z-index:20;
+    backdrop-filter:blur(10px);
+    background:rgba(11,15,25,0.85);
+    border-bottom:1px solid var(--border);
+  }
+  .tabs-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    display:flex;
+    gap:8px;
+    padding:12px 24px;
+  }
+  .tab-btn{
+    appearance:none;
+    border:1px solid var(--border);
+    background:var(--panel);
+    color:var(--text-dim);
+    padding:10px 18px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .tab-btn:hover{color:var(--text); border-color:#3a4358;}
+  .tab-btn.active{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:white;
+  }
+  main{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:40px 24px 100px;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    color:var(--text-dim);
+    font-size:13px;
+    margin-bottom:32px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:24px;
+  }
+  .meta-row strong{color:var(--text);}
+  .panel{
+    display:none;
+  }
+  .panel.active{display:block;}
+  section.card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px 32px;
+    margin-bottom:20px;
+  }
+  section.card h2{
+    font-size:19px;
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  section.card h2 .num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:28px;
+    height:28px;
+    border-radius:8px;
+    background:var(--accent-soft);
+    color:#c9c2ff;
+    font-size:13px;
+    flex:none;
+  }
+  section.card p, section.card li{
+    color:#c6cbdb;
+    font-size:15px;
+  }
+  section.card ul{padding-left:20px; margin:10px 0;}
+  section.card li{margin-bottom:6px;}
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  @media(max-width:640px){.grid-2{grid-template-columns:1fr;}}
+  .pill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+  .pill{
+    background:var(--bg-soft);
+    border:1px solid var(--border);
+    color:#c6cbdb;
+    padding:6px 12px;
+    border-radius:8px;
+    font-size:13px;
+  }
+  .pill.good{border-color:#1f4f3c; color:var(--success); background:#0e2320;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:14px;
+    font-size:14px;
+  }
+  th,td{
+    text-align:left;
+    padding:10px 12px;
+    border-bottom:1px solid var(--border);
+    color:#c6cbdb;
+  }
+  th{color:var(--text-dim); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.04em;}
+  .callout{
+    background:linear-gradient(135deg, var(--accent-soft), #14203f);
+    border:1px solid #362a7a;
+    border-radius:14px;
+    padding:20px 24px;
+    margin-bottom:24px;
+    font-size:14px;
+    color:#dcd8ff;
+  }
+  footer{
+    border-top:1px solid var(--border);
+    padding:32px 24px 48px;
+    text-align:center;
+    color:var(--text-dim);
+    font-size:13px;
+  }
+  footer a{color:var(--text-dim); text-decoration:underline;}
+  code{
+    background:var(--bg-soft);
+    border:1px solid var(--border);
+    padding:2px 6px;
+    border-radius:6px;
+    font-size:13px;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="badge">🚀 Rocket Listing</span>
+  <h1>Privacy Policy &amp; Terms of Use</h1>
+  <p class="sub">How the Rocket Listing Chrome extension handles your data, and the terms for using it.</p>
+</header>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" data-target="privacy">Privacy Policy</button>
+    <button class="tab-btn" data-target="terms">Terms &amp; Conditions</button>
+  </div>
+</nav>
+
+<main>
+  <div class="meta-row">
+    <span><strong>Effective date:</strong> September 8, 2026</span>
+    <span><strong>Last updated:</strong> September 8, 2026</span>
+    <span><strong>Product:</strong> Rocket Listing (Chrome Extension)</span>
+  </div>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy" class="panel active">
+
+    <div class="callout">
+      <strong>In short:</strong> Rocket Listing runs entirely inside your browser. Your recordings, listing
+      templates and settings are stored locally on your device using Chrome's storage APIs. We do not operate a
+      backend server, and we do not collect, transmit, sell, or share your browsing data, product data, or
+      recorded actions with anyone.
+    </div>
+
+    <section class="card">
+      <h2><span class="num">1</span> Who we are</h2>
+      <p>Rocket Listing is a Chrome extension (Manifest V3) that helps sellers automate product listing workflows
+      on marketplaces such as Meesho, Flipkart and Amazon — by recording DOM-based actions once and replaying them
+      later to fill forms and complete repetitive seller tasks.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">2</span> Data we access and why</h2>
+      <p>To do its job, the extension requests the following browser permissions. Here is exactly what each one is
+      used for:</p>
+      <table>
+        <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>activeTab / tabs</td><td>Know which tab you're working in so recording and replay target the right page.</td></tr>
+          <tr><td>scripting</td><td>Inject the recorder/replayer into the page you're actively using.</td></tr>
+          <tr><td>storage / unlimitedStorage</td><td>Save your recordings, listing templates and preferences locally in your browser (IndexedDB / chrome.storage).</td></tr>
+          <tr><td>webNavigation</td><td>Detect page navigations so a recorded workflow keeps working across multi-page or SPA flows.</td></tr>
+          <tr><td>downloads</td><td>Let you export a recording or listing data to a file on your device, on your request.</td></tr>
+          <tr><td>sidePanel</td><td>Show the extension's control panel alongside the page you're working on.</td></tr>
+          <tr><td>host_permissions (all sites)</td><td>Allow recording/replay on whichever marketplace or site you choose to use it on — the extension does not act unless you start it.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">3</span> Where your data lives</h2>
+      <p>Everything Rocket Listing captures — recorded actions, element selectors, listing field values, and your
+      settings — is written to your browser's local storage (IndexedDB and <code>chrome.storage</code>) on your own
+      device.</p>
+      <div class="pill-list">
+        <span class="pill good">✓ Stored locally, on-device</span>
+        <span class="pill good">✓ Not uploaded to any server</span>
+        <span class="pill good">✓ Not shared with third parties</span>
+        <span class="pill good">✓ Not sold, ever</span>
+      </div>
+      <p style="margin-top:14px;">Uninstalling the extension, or clearing your browser's extension data, permanently
+      deletes this locally stored information. We have no copy of it and cannot recover it for you.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">4</span> Third-party requests</h2>
+      <p>The extension loads a small number of static UI icons from a third-party CDN (icons8.com) for its popup
+      interface. No personal data, page content, or recorded actions are sent as part of these requests — only a
+      standard image request occurs, subject to that provider's own handling of network requests (e.g. IP address
+      in server logs), which is outside our control.</p>
+      <p>Rocket Listing does not call any AI/LLM API, analytics service, or advertising network, and does not embed
+      any tracking pixels or third-party analytics SDKs.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">5</span> What we do <em>not</em> do</h2>
+      <div class="grid-2">
+        <ul>
+          <li>No account creation or login required</li>
+          <li>No collection of personal information (name, email, payment details)</li>
+        </ul>
+        <ul>
+          <li>No sale of user data to third parties</li>
+          <li>No behavioral advertising or ad targeting</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">6</span> Your choices &amp; control</h2>
+      <p>You can review, export, or delete any recording from within the extension's side panel at any time. You
+      can revoke site access for specific domains or remove the extension entirely from
+      <code>chrome://extensions</code>, which removes all locally stored data associated with it.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">7</span> Children's privacy</h2>
+      <p>Rocket Listing is a productivity tool intended for business sellers and is not directed at children. We do
+      not knowingly collect data from children under 13.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">8</span> Changes to this policy</h2>
+      <p>If this policy changes — for example if a future version introduces optional cloud sync — we will update
+      the "Last updated" date above and describe the change here before it takes effect.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">9</span> Contact</h2>
+      <p>Questions about this policy? Reach out at
+      <a href="mailto:parth.makwanahdp@gmail.com">parth.makwanahdp@gmail.com</a>.</p>
+    </section>
+  </div>
+
+  <!-- TERMS -->
+  <section id="terms" class="panel">
+
+    <div class="callout">
+      <strong>In short:</strong> Rocket Listing is provided as-is to help you automate repetitive listing tasks.
+      You're responsible for how you use it on third-party marketplaces, including complying with each
+      marketplace's own rules.
+    </div>
+
+    <section class="card">
+      <h2><span class="num">1</span> Acceptance of terms</h2>
+      <p>By installing or using the Rocket Listing Chrome extension ("the Extension", "we", "our"), you agree to
+      these Terms &amp; Conditions. If you do not agree, please uninstall the Extension and discontinue use.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">2</span> What the Extension does</h2>
+      <p>Rocket Listing records DOM-based user actions on a website you choose, and replays that recorded workflow
+      later to help fill forms and complete repetitive seller tasks — for example, product uploads on
+      marketplaces like Meesho, Flipkart, and Amazon. It only records or acts when you explicitly start it.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">3</span> Your responsibilities</h2>
+      <ul>
+        <li>You are solely responsible for the accuracy of any product data, listings, or form submissions made
+        using the Extension.</li>
+        <li>You must comply with the terms of service, seller policies, and applicable rules of any marketplace or
+        website you use the Extension on.</li>
+        <li>You must have the right to access and act on any account or site you use the Extension with.</li>
+        <li>You are responsible for reviewing replayed actions before relying on them, especially on live/production
+        listings.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">4</span> Acceptable use</h2>
+      <p>You agree not to use the Extension to:</p>
+      <ul>
+        <li>Violate any marketplace's terms of service or attempt to circumvent their anti-automation protections
+        in a way that causes harm to that platform or other sellers.</li>
+        <li>Submit fraudulent, misleading, or illegal listings or content.</li>
+        <li>Reverse-engineer, resell, or redistribute the Extension outside of the official Chrome Web Store
+        listing, except as permitted by its open-source license (if applicable).</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">5</span> No warranty</h2>
+      <p>The Extension is provided "as is" and "as available," without warranties of any kind, express or implied.
+      DOM-based automation can break if a target website changes its layout — we do not guarantee that recordings
+      will always replay successfully, and you should verify results before relying on them for business-critical
+      tasks.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">6</span> Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential
+      damages arising from your use of the Extension, including but not limited to lost listings, marketplace
+      account actions taken against you, or lost business, arising from use or inability to use the Extension.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">7</span> Third-party marketplaces</h2>
+      <p>Rocket Listing is an independent tool and is not affiliated with, endorsed by, or sponsored by Meesho,
+      Flipkart, Amazon, or any other marketplace referenced. All trademarks belong to their respective owners.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">8</span> Changes to the Extension or these terms</h2>
+      <p>We may update the Extension's features or these Terms at any time. Continued use after an update
+      constitutes acceptance of the revised Terms. Material changes will be reflected by updating the "Last
+      updated" date at the top of this page.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">9</span> Termination</h2>
+      <p>You may stop using the Extension at any time by uninstalling it. We may discontinue or modify the
+      Extension at our discretion.</p>
+    </section>
+
+    <section class="card">
+      <h2><span class="num">10</span> Contact</h2>
+      <p>Questions about these Terms? Reach out at
+      <a href="mailto:parth.makwanahdp@gmail.com">parth.makwanahdp@gmail.com</a>.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Rocket Listing. This page is provided for transparency about the Rocket Listing Chrome extension.</p>
+  <p><a href="#privacy" data-target="privacy" class="footlink">Privacy Policy</a> · <a href="#terms" data-target="terms" class="footlink">Terms &amp; Conditions</a></p>
+</footer>
+
+<script>
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const panels = { privacy: document.getElementById('privacy'), terms: document.getElementById('terms') };
+
+  function activate(target) {
+    tabButtons.forEach(b => b.classList.toggle('active', b.dataset.target === target));
+    Object.entries(panels).forEach(([key, el]) => el.classList.toggle('active', key === target));
+    history.replaceState(null, '', '#' + target);
+  }
+
+  tabButtons.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.target)));
+  document.querySelectorAll('.footlink').forEach(a => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    activate(a.dataset.target);
+    window.scrollTo({top:0, behavior:'smooth'});
+  }));
+
+  const initial = window.location.hash.replace('#','');
+  if (initial === 'terms') activate('terms');
+</script>
+
+</body>
+</html>
