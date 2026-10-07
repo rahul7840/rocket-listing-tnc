@@ -3,254 +3,254 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rocket Listing — Privacy Policy & Terms</title>
-<meta name="description" content="Privacy Policy and Terms & Conditions for the Rocket Listing Chrome extension." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>" />
+<title>Rocket Listing — Privacy Policy &amp; Terms</title>
+<meta name="description" content="Privacy Policy and Terms &amp; Conditions for the Rocket Listing Chrome extension. We never sell your data." />
+<link rel="icon" type="image/png" href="favicon.png" />
 <style>
   :root{
-    --bg:#0b0f19;
-    --bg-soft:#111827;
-    --panel:#151b2c;
-    --border:#232b3d;
-    --text:#e7ebf5;
-    --text-dim:#9aa4b8;
-    --accent:#6d5bff;
-    --accent-soft:#221b45;
-    --success:#3ddc97;
-    --max:960px;
+    --bg:#ffffff;
+    --bg-soft:#f7f7f8;
+    --text:#0d0d0d;
+    --muted:#5d5d5d;
+    --faint:#8f8f8f;
+    --rule:#e6e6e6;
+    --hover:#f1f1f2;
+    --ink:#0d0d0d;
+    --top:64px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:radial-gradient(1200px 600px at 50% -10%, #1a1440 0%, var(--bg) 55%) fixed;
+    background:var(--bg);
     color:var(--text);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;
-  }
-  a{color:var(--accent);}
-  header.hero{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:64px 24px 32px;
-    text-align:center;
-  }
-  .badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:var(--accent-soft);
-    color:#c9c2ff;
-    border:1px solid #362a7a;
-    padding:6px 14px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:.02em;
-  }
-  h1{
-    font-size:clamp(28px,5vw,42px);
-    margin:20px 0 8px;
-    letter-spacing:-0.02em;
-  }
-  .sub{
-    color:var(--text-dim);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size:16px;
-    max-width:560px;
-    margin:0 auto;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
   }
-  nav.tabs{
-    position:sticky;
-    top:0;
-    z-index:20;
+  a{color:var(--text); text-decoration:underline; text-underline-offset:3px; text-decoration-color:#bdbdbd;}
+  a:hover{text-decoration-color:var(--text);}
+
+  /* top bar */
+  .top{
+    position:sticky; top:0; z-index:30;
+    height:var(--top);
+    background:rgba(255,255,255,.92);
     backdrop-filter:blur(10px);
-    background:rgba(11,15,25,0.85);
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid var(--rule);
   }
-  .tabs-inner{
-    max-width:var(--max);
-    margin:0 auto;
-    display:flex;
-    gap:8px;
-    padding:12px 24px;
-  }
-  .tab-btn{
-    appearance:none;
-    border:1px solid var(--border);
-    background:var(--panel);
-    color:var(--text-dim);
-    padding:10px 18px;
-    border-radius:10px;
-    font-size:14px;
-    font-weight:600;
-    cursor:pointer;
-    transition:all .15s ease;
-  }
-  .tab-btn:hover{color:var(--text); border-color:#3a4358;}
-  .tab-btn.active{
-    background:var(--accent);
-    border-color:var(--accent);
-    color:white;
-  }
-  main{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:40px 24px 100px;
-  }
-  .meta-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:16px;
-    color:var(--text-dim);
-    font-size:13px;
-    margin-bottom:32px;
-    border-bottom:1px solid var(--border);
-    padding-bottom:24px;
-  }
-  .meta-row strong{color:var(--text);}
-  .panel{
-    display:none;
-  }
-  .panel.active{display:block;}
-  section.card{
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:16px;
-    padding:28px 32px;
-    margin-bottom:20px;
-  }
-  section.card h2{
-    font-size:19px;
-    margin:0 0 12px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  section.card h2 .num{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:28px;
-    height:28px;
-    border-radius:8px;
-    background:var(--accent-soft);
-    color:#c9c2ff;
-    font-size:13px;
-    flex:none;
-  }
-  section.card p, section.card li{
-    color:#c6cbdb;
-    font-size:15px;
-  }
-  section.card ul{padding-left:20px; margin:10px 0;}
-  section.card li{margin-bottom:6px;}
-  .grid-2{
+  .top-in{
+    height:100%;
+    padding:0 28px;
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
     gap:16px;
   }
-  @media(max-width:640px){.grid-2{grid-template-columns:1fr;}}
-  .pill-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:12px;
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; font-size:15px; text-decoration:none; letter-spacing:.01em;}
+  .brand .mark{width:28px; height:28px; object-fit:contain; display:block;}
+  .top-nav{display:flex; gap:4px;}
+  .top-nav a{
+    text-decoration:none; font-size:15px; font-weight:500;
+    padding:7px 14px; border-radius:999px; color:var(--text);
   }
-  .pill{
-    background:var(--bg-soft);
-    border:1px solid var(--border);
-    color:#c6cbdb;
-    padding:6px 12px;
-    border-radius:8px;
-    font-size:13px;
+  .top-nav a:hover{background:var(--hover);}
+  .top-nav a.active{background:var(--hover);}
+  .cta{
+    justify-self:end;
+    background:var(--ink); color:#fff; text-decoration:none;
+    font-size:14.5px; font-weight:600; padding:10px 18px; border-radius:999px;
   }
-  .pill.good{border-color:#1f4f3c; color:var(--success); background:#0e2320;}
-  table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:14px;
-    font-size:14px;
+  .cta:hover{background:#2a2a2a;}
+
+  /* three-column docs shell */
+  .shell{
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr) 260px;
+    max-width:1320px;
+    margin:0 auto;
   }
-  th,td{
-    text-align:left;
-    padding:10px 12px;
-    border-bottom:1px solid var(--border);
-    color:#c6cbdb;
+  .side, .toc{
+    position:sticky; top:var(--top);
+    align-self:start;
+    height:calc(100vh - var(--top));
+    overflow-y:auto;
+    padding:36px 20px 40px 28px;
   }
-  th{color:var(--text-dim); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.04em;}
-  .callout{
-    background:linear-gradient(135deg, var(--accent-soft), #14203f);
-    border:1px solid #362a7a;
-    border-radius:14px;
-    padding:20px 24px;
-    margin-bottom:24px;
-    font-size:14px;
-    color:#dcd8ff;
+  .side h4{
+    margin:26px 0 8px; padding:0 12px;
+    font-size:14px; font-weight:700; color:var(--text);
   }
-  footer{
-    border-top:1px solid var(--border);
-    padding:32px 24px 48px;
-    text-align:center;
-    color:var(--text-dim);
-    font-size:13px;
+  .side h4:first-child{margin-top:0;}
+  .side a{
+    display:block; text-decoration:none;
+    font-size:14.5px; color:#2b2b2b;
+    padding:7px 12px; border-radius:10px; line-height:1.4;
   }
-  footer a{color:var(--text-dim); text-decoration:underline;}
+  .side a:hover{background:var(--hover);}
+  .side a.active{background:var(--hover); font-weight:600;}
+
+  .doc{
+    padding:56px 56px 120px;
+    max-width:860px;
+    min-width:0;
+  }
+  .doc article{display:none;}
+  .doc article.active{display:block;}
+  h1{
+    font-size:clamp(30px,4vw,40px);
+    line-height:1.15; letter-spacing:-.02em;
+    margin:0 0 12px; font-weight:700;
+  }
+  .lead{
+    font-size:18px; line-height:1.6; color:var(--muted);
+    margin:0 0 18px; max-width:62ch;
+  }
+  .lead strong{color:var(--text); font-weight:600;}
+  .meta{
+    font-size:13.5px; color:var(--faint);
+    padding-bottom:28px; margin-bottom:8px;
+    border-bottom:1px solid var(--rule);
+  }
+  .meta span + span::before{content:"·"; margin:0 10px;}
+  article section{
+    scroll-margin-top:calc(var(--top) + 24px);
+    padding-top:40px;
+  }
+  article h2{
+    font-size:22px; line-height:1.3; letter-spacing:-.01em;
+    margin:0 0 14px; font-weight:650;
+  }
+  article p{margin:0 0 14px; color:#2b2b2b;}
+  article ul{margin:4px 0 16px; padding-left:22px; color:#2b2b2b;}
+  article li{margin-bottom:8px;}
+  article li::marker{color:#9a9a9a;}
+  ul.checks{list-style:none; padding:0;}
+  ul.checks li{position:relative; padding-left:26px;}
+  ul.checks li::before{content:"✓"; position:absolute; left:0; font-weight:700;}
   code{
-    background:var(--bg-soft);
-    border:1px solid var(--border);
-    padding:2px 6px;
-    border-radius:6px;
-    font-size:13px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.88em; background:var(--bg-soft);
+    padding:2px 6px; border-radius:6px;
+  }
+  table{
+    width:100%; border-collapse:collapse;
+    margin:8px 0 18px; font-size:14.5px; line-height:1.55;
+  }
+  th{
+    text-align:left; font-weight:600; font-size:14px; color:var(--text);
+    padding:10px 16px 10px 0; border-bottom:1px solid var(--text);
+  }
+  td{
+    text-align:left; vertical-align:top; color:#2b2b2b;
+    padding:14px 16px 14px 0; border-bottom:1px solid var(--rule);
+  }
+  td:first-child{white-space:nowrap; padding-right:24px;}
+  table.wide td:first-child{white-space:normal;}
+
+  /* right-hand "On this page" */
+  .toc .t{font-size:13px; color:var(--faint); margin:0 0 12px; padding-left:18px;}
+  .toc nav{display:flex; flex-direction:column; border-left:1px solid var(--rule);}
+  .toc a{
+    text-decoration:none; font-size:13.5px; line-height:1.4;
+    color:var(--faint); padding:7px 0 7px 16px; margin-left:-1px;
+    border-left:2px solid transparent;
+  }
+  .toc a:hover{color:var(--text);}
+  .toc a.active{color:var(--text); border-left-color:var(--text);}
+  .toc nav[hidden]{display:none;}
+
+  /* small screens */
+  .mobile-menu{display:none;}
+  footer{
+    border-top:1px solid var(--rule);
+    padding:28px;
+    text-align:center;
+    color:var(--faint);
+    font-size:13.5px;
+  }
+  footer a{color:var(--faint);}
+
+  @media (max-width:1180px){
+    .shell{grid-template-columns:240px minmax(0,1fr);}
+    .toc{display:none;}
+    .doc{padding:48px 40px 100px;}
+  }
+  @media (max-width:860px){
+    .top-in{padding:0 16px; grid-template-columns:1fr auto;}
+    .top-nav{display:none;}
+    .shell{display:block;}
+    .side{display:none;}
+    .doc{padding:28px 20px 80px;}
+    .mobile-menu{
+      display:flex; gap:6px; margin:0 0 24px;
+      border-bottom:1px solid var(--rule); padding-bottom:14px;
+    }
+    .mobile-menu a{
+      text-decoration:none; font-size:14.5px; font-weight:500;
+      padding:7px 14px; border-radius:999px; color:var(--text);
+    }
+    .mobile-menu a.active{background:var(--hover);}
+    td:first-child{white-space:normal;}
+    table, thead, tbody, tr, th, td{display:block;}
+    thead{display:none;}
+    tr{padding:14px 0; border-bottom:1px solid var(--rule);}
+    td{border:0; padding:2px 0;}
+    td:first-child{font-weight:600; padding-bottom:4px;}
   }
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <span class="badge">🚀 Rocket Listing</span>
-  <h1>Privacy Policy &amp; Terms of Use</h1>
-  <p class="sub">What Rocket Listing collects, why, and how it is protected &mdash; plus the terms for using it. We never sell your data.</p>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#privacy"><img class="mark" src="logo.png" alt="" width="28" height="28" /> Rocket Listing</a>
+    <nav class="top-nav" aria-label="Documents">
+      <a href="#privacy" data-doc="privacy">Privacy Policy</a>
+      <a href="#terms" data-doc="terms">Terms &amp; Conditions</a>
+    </nav>
+    <a class="cta" href="mailto:coding2020@gmail.com">Contact us</a>
+  </div>
 </header>
 
-<nav class="tabs">
-  <div class="tabs-inner">
-    <button class="tab-btn active" data-target="privacy">Privacy Policy</button>
-    <button class="tab-btn" data-target="terms">Terms &amp; Conditions</button>
-  </div>
-</nav>
+<div class="shell">
+  <aside class="side" aria-label="Legal navigation">
+    <h4>Legal</h4>
+    <a href="#privacy" data-doc="privacy">Privacy Policy</a>
+    <a href="#terms" data-doc="terms">Terms &amp; Conditions</a>
+    <h4>Quick links</h4>
+    <a href="#privacy-4" data-quick>We do not sell your data</a>
+    <a href="#privacy-2" data-quick>Information we collect</a>
+    <a href="#privacy-7" data-quick>Your choices and rights</a>
+    <a href="#privacy-8" data-quick>Browser permissions</a>
+    <a href="mailto:coding2020@gmail.com?subject=Delete%20my%20Rocket%20Listing%20data">Request data deletion</a>
+  </aside>
 
-<main>
-  <div class="meta-row">
-    <span><strong>Effective date:</strong> October 7, 2026</span>
-    <span><strong>Last updated:</strong> October 7, 2026</span>
-    <span><strong>Product:</strong> Rocket Listing (Chrome Extension)</span>
-  </div>
-
-  <!-- PRIVACY POLICY -->
-  <section id="privacy" class="panel active">
-
-    <div class="callout">
-      <strong>In short:</strong> We do <strong>not sell</strong> your personal data, and we do not share it for
-      advertising. Rocket Listing collects only the information it needs to work: to sign you in, to save and sync
-      your listing templates, to show your Meesho payment and profit figures, and to generate listing text for you.
-      We use it only for those purposes &mdash; to make your selling simpler &mdash; and nothing else.
+  <main class="doc">
+    <div class="mobile-menu">
+      <a href="#privacy" data-doc="privacy">Privacy Policy</a>
+      <a href="#terms" data-doc="terms">Terms &amp; Conditions</a>
     </div>
 
-    <section class="card">
-      <h2><span class="num">1</span> Who we are and what this policy covers</h2>
-      <p>Rocket Listing is a Chrome extension (Manifest V3) that helps online sellers on marketplaces such as
+    <article id="privacy">
+      <h1>Privacy Policy</h1>
+      <p class="lead">We do <strong>not sell</strong> your personal data, and we do not share it for advertising. Rocket Listing collects only the information it needs to work: to sign you in, to save and sync your listing templates, to show your Meesho payment and profit figures, and to generate listing text for you. We use it only for those purposes &mdash; to make your selling simpler &mdash; and nothing else.</p>
+      <p class="meta"><span>Effective October 7, 2026</span><span>Last updated October 7, 2026</span><span>Rocket Listing (Chrome extension)</span></p>
+<section id="privacy-1">
+<h2>1. Who we are and what this policy covers</h2>
+<p>Rocket Listing is a Chrome extension (Manifest V3) that helps online sellers on marketplaces such as
       Meesho, Flipkart and Amazon save time: it records a product-listing workflow once and replays it to fill
       forms, helps generate listing text, and shows finance and profitability figures for your seller account.</p>
       <p>This policy explains what information the extension collects, how it is used, where it is stored, who it
       is shared with, how long we keep it, and the choices you have. It applies to the Rocket Listing extension and
       the Rocket Listing service that it connects to (&ldquo;the Service&rdquo;). &ldquo;We&rdquo;,
       &ldquo;us&rdquo; and &ldquo;our&rdquo; mean the Rocket Listing team.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">2</span> Information we collect</h2>
-      <p>We collect only what is listed below. The last column shows whether the information leaves your device.</p>
-      <table>
+</section>
+<section id="privacy-2">
+<h2>2. Information we collect</h2>
+<p>We collect only what is listed below. The last column shows whether the information leaves your device.</p>
+      <table class="wide">
         <thead><tr><th>Information</th><th>What it includes</th><th>Sent to our servers?</th></tr></thead>
         <tbody>
           <tr>
@@ -293,11 +293,10 @@
       fields that look like card, CVV, PIN or secret fields with &ldquo;[REDACTED]&rdquo;. Because other text you type
       on a recorded page is saved as you typed it, please do not record workflows that involve other people&rsquo;s
       personal information. We do not collect your browsing history, and we do not track which sites you visit.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">3</span> How we use your information</h2>
-      <p>We use your information only to provide and improve the features you use:</p>
+</section>
+<section id="privacy-3">
+<h2>3. How we use your information</h2>
+<p>We use your information only to provide and improve the features you use:</p>
       <ul>
         <li>to sign you in and keep your account secure;</li>
         <li>to save, sync, list and replay your listing templates;</li>
@@ -308,23 +307,17 @@
       </ul>
       <p>We do not use your information for advertising, we do not build advertising profiles, and we do not use it
       to determine creditworthiness or for lending. We do not use it for any purpose unrelated to Rocket Listing.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">4</span> We do not sell your data</h2>
-      <div class="pill-list" style="margin-top:0;margin-bottom:12px;">
-        <span class="pill good">&check; Never sold</span>
-        <span class="pill good">&check; Never shared for advertising</span>
-        <span class="pill good">&check; Used only for your purpose</span>
-      </div>
+</section>
+<section id="privacy-4">
+<h2>4. We do not sell your data</h2>
+<ul class="checks"><li>Never sold</li><li>Never shared for advertising</li><li>Used only for your purpose</li></ul>
       <p>We do not sell, rent or trade your personal information, now or in the future. The information described in
       this policy is collected solely so that Rocket Listing can do what you installed it to do, and it is used only
       for that purpose.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">5</span> Who we share information with</h2>
-      <p>We share information only in these limited situations:</p>
+</section>
+<section id="privacy-5">
+<h2>5. Who we share information with</h2>
+<p>We share information only in these limited situations:</p>
       <ul>
         <li><strong>Google</strong> &mdash; to sign you in, using Google&rsquo;s own sign-in. Google handles your
         sign-in under its own privacy policy.</li>
@@ -344,11 +337,10 @@
       recorded actions, listing data or account details are sent with them, but those providers may see your IP
       address, as with any website. The Meesho category lookup sends only numeric category IDs. The extension
       contains no analytics, advertising or tracking software.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">6</span> Storage, security and retention</h2>
-      <p><strong>Where it is stored.</strong> Information kept on your device is held in your browser&rsquo;s local
+</section>
+<section id="privacy-6">
+<h2>6. Storage, security and retention</h2>
+<p><strong>Where it is stored.</strong> Information kept on your device is held in your browser&rsquo;s local
       storage (IndexedDB and <code>chrome.storage</code>). Information that is synced is stored on our servers in
       the databases that run the Service. Information sent between the extension and our servers travels over an
       encrypted HTTPS connection, and access to it is limited to the people and systems that need it to run the
@@ -362,11 +354,10 @@
       us to delete your account or data, we delete it within 30 days, except where we are required by law to keep
       something. Information stored only on your device stays there until you delete it or remove the
       extension.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">7</span> Your choices and rights</h2>
-      <ul>
+</section>
+<section id="privacy-7">
+<h2>7. Your choices and rights</h2>
+<ul>
         <li><strong>Review and delete templates</strong> from the extension&rsquo;s side panel at any time.</li>
         <li><strong>Sign out</strong> from the side panel. This revokes the Google token and clears your session from
         the extension.</li>
@@ -380,13 +371,12 @@
         also want that deleted.</li>
         <li><strong>Revoke Google access</strong> at any time from your Google Account&rsquo;s security settings.</li>
       </ul>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">8</span> Browser permissions and why we ask for them</h2>
-      <p>The extension requests these Chrome permissions. Each is used only for the purpose shown, and nothing is
+</section>
+<section id="privacy-8">
+<h2>8. Browser permissions and why we ask for them</h2>
+<p>The extension requests these Chrome permissions. Each is used only for the purpose shown, and nothing is
       recorded or acted on until you start it.</p>
-      <table>
+      <table class="wide">
         <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
         <tbody>
           <tr><td>identity</td><td>Sign in with your Google account.</td></tr>
@@ -400,84 +390,71 @@
           <tr><td>Access to all sites</td><td>Allow the recorder and autofill to work on the marketplace and seller pages you choose. We do not use this access to collect or transmit the pages you browse.</td></tr>
         </tbody>
       </table>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">9</span> Google user data (Limited Use)</h2>
-      <p>Rocket Listing&rsquo;s use and transfer to any other app of information received from Google APIs will adhere
+</section>
+<section id="privacy-9">
+<h2>9. Google user data (Limited Use)</h2>
+<p>Rocket Listing&rsquo;s use and transfer to any other app of information received from Google APIs will adhere
       to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq" target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>,
       including the Limited Use requirements. We request only the <code>openid</code>, <code>email</code> and
       <code>profile</code> scopes, and we use that information only to sign you in and identify your account. We do not
       sell it, use it for advertising, or allow humans to read it except as needed for security, to comply with the
       law, or with your consent.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">10</span> Children&rsquo;s privacy</h2>
-      <p>Rocket Listing is a business tool for sellers and is not directed at children. We do not knowingly collect
+</section>
+<section id="privacy-10">
+<h2>10. Children&rsquo;s privacy</h2>
+<p>Rocket Listing is a business tool for sellers and is not directed at children. We do not knowingly collect
       information from anyone under 18. If you believe a child has given us information, email us and we will delete
       it.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">11</span> Changes to this policy</h2>
-      <p>If we change what we collect or how we use it, we will update this page and the &ldquo;Last updated&rdquo;
+</section>
+<section id="privacy-11">
+<h2>11. Changes to this policy</h2>
+<p>If we change what we collect or how we use it, we will update this page and the &ldquo;Last updated&rdquo;
       date before the change takes effect, and for material changes we will also tell you in the extension or by
       email. Continuing to use Rocket Listing after a change means you accept the updated policy.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">12</span> Contact</h2>
-      <p>Questions about this policy, or want to access or delete your data? Email us at
+</section>
+<section id="privacy-12">
+<h2>12. Contact</h2>
+<p>Questions about this policy, or want to access or delete your data? Email us at
       <a href="mailto:coding2020@gmail.com">coding2020@gmail.com</a>.</p>
-    </section>
-  </section>
+</section>
+    </article>
 
-  <!-- TERMS -->
-  <section id="terms" class="panel">
-
-    <div class="callout">
-      <strong>In short:</strong> Rocket Listing helps you automate repetitive listing work. It is provided as-is, you
-      are responsible for how you use it on third-party marketplaces, and your data is handled as described in our
-      <a href="#privacy" class="footlink" data-target="privacy">Privacy Policy</a> &mdash; including that we do not sell it.
-    </div>
-
-    <section class="card">
-      <h2><span class="num">1</span> Acceptance of terms</h2>
-      <p>By installing or using the Rocket Listing Chrome extension and its related service (&ldquo;the
+    <article id="terms">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="lead">Rocket Listing helps you automate repetitive listing work. It is provided as-is, you are responsible for how you use it on third-party marketplaces, and your data is handled as described in our <a href="#privacy">Privacy Policy</a> &mdash; including that we do not sell it.</p>
+      <p class="meta"><span>Effective October 7, 2026</span><span>Last updated October 7, 2026</span><span>Rocket Listing (Chrome extension)</span></p>
+<section id="terms-1">
+<h2>1. Acceptance of terms</h2>
+<p>By installing or using the Rocket Listing Chrome extension and its related service (&ldquo;the
       Service&rdquo;), you agree to these Terms &amp; Conditions and to our Privacy Policy. If you do not agree,
       please uninstall the extension and stop using it.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">2</span> What the Service does</h2>
-      <p>Rocket Listing records the steps of a product-listing workflow on a website you choose and replays them to
+</section>
+<section id="terms-2">
+<h2>2. What the Service does</h2>
+<p>Rocket Listing records the steps of a product-listing workflow on a website you choose and replays them to
       fill forms and complete repetitive seller tasks. It can also generate listing text, show competitor and category
       information, and display earnings and profitability figures for your Meesho seller account. It acts only when
       you start it.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">3</span> Your account</h2>
-      <ul>
+</section>
+<section id="terms-3">
+<h2>3. Your account</h2>
+<ul>
         <li>Some features require you to sign in with Google. You are responsible for activity under your account and
         for keeping your Google account secure.</li>
         <li>You must provide accurate information and may use the Service only if you can form a binding contract
         where you live.</li>
         <li>Some features may be limited by plan or usage (for example, how often payments can be synced).</li>
       </ul>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">4</span> Your data and privacy</h2>
-      <p>You keep ownership of the product data, templates and finance information you put into the Service. You give
+</section>
+<section id="terms-4">
+<h2>4. Your data and privacy</h2>
+<p>You keep ownership of the product data, templates and finance information you put into the Service. You give
       us permission to store and process it only to provide the Service to you, as described in the Privacy Policy. We
       do not sell your personal data. You can ask us to delete your data at any time.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">5</span> Your responsibilities</h2>
-      <ul>
+</section>
+<section id="terms-5">
+<h2>5. Your responsibilities</h2>
+<ul>
         <li>You are solely responsible for the accuracy of any product data, listings or form submissions made using
         the Service.</li>
         <li>You must follow the terms, seller policies and rules of every marketplace or website you use the
@@ -488,18 +465,16 @@
         <li>Only sync or record information that you are entitled to use, and do not record other people&rsquo;s
         personal information.</li>
       </ul>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">6</span> AI-generated content and financial figures</h2>
-      <p>Listing text produced with AI assistance, and profit, margin and earnings figures shown by the Service, are
+</section>
+<section id="terms-6">
+<h2>6. AI-generated content and financial figures</h2>
+<p>Listing text produced with AI assistance, and profit, margin and earnings figures shown by the Service, are
       aids to help you decide. They may be incomplete or wrong. Check them before you publish a listing or make a
       business decision. Figures are based on the data you sync and on marketplace data that can change.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">7</span> Acceptable use</h2>
-      <p>You agree not to use the Service to:</p>
+</section>
+<section id="terms-7">
+<h2>7. Acceptable use</h2>
+<p>You agree not to use the Service to:</p>
       <ul>
         <li>violate any marketplace&rsquo;s terms of service or work around its protections in a way that harms that
         platform or other sellers;</li>
@@ -508,74 +483,104 @@
         <li>reverse-engineer, resell or redistribute the extension, except through its official Chrome Web Store
         listing or as permitted by law.</li>
       </ul>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">8</span> No warranty</h2>
-      <p>The Service is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;, without warranties of any kind,
+</section>
+<section id="terms-8">
+<h2>8. No warranty</h2>
+<p>The Service is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;, without warranties of any kind,
       express or implied. Browser automation can break when a website changes its layout, and we do not guarantee that
       recordings will always replay successfully or that the Service will be uninterrupted or error-free.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">9</span> Limitation of liability</h2>
-      <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental or consequential
+</section>
+<section id="terms-9">
+<h2>9. Limitation of liability</h2>
+<p>To the maximum extent permitted by law, we are not liable for any indirect, incidental or consequential
       damages arising from your use of the Service, including lost listings, actions taken against your marketplace
       account, or lost business or profit.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">10</span> Third-party marketplaces</h2>
-      <p>Rocket Listing is an independent tool and is not affiliated with, endorsed by or sponsored by Meesho,
+</section>
+<section id="terms-10">
+<h2>10. Third-party marketplaces</h2>
+<p>Rocket Listing is an independent tool and is not affiliated with, endorsed by or sponsored by Meesho,
       Flipkart, Amazon or any other marketplace mentioned. All trademarks belong to their respective owners.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">11</span> Changes to the Service or these terms</h2>
-      <p>We may update the Service or these Terms. If we make a material change we will update the &ldquo;Last
+</section>
+<section id="terms-11">
+<h2>11. Changes to the Service or these terms</h2>
+<p>We may update the Service or these Terms. If we make a material change we will update the &ldquo;Last
       updated&rdquo; date and, where appropriate, tell you in the extension. Continuing to use the Service after a
       change means you accept the revised Terms.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">12</span> Termination</h2>
-      <p>You may stop using the Service at any time by uninstalling the extension, and you may ask us to delete your
+</section>
+<section id="terms-12">
+<h2>12. Termination</h2>
+<p>You may stop using the Service at any time by uninstalling the extension, and you may ask us to delete your
       account and data. We may suspend or end access if you break these Terms or misuse the Service, or we may
       discontinue or change the Service.</p>
-    </section>
-
-    <section class="card">
-      <h2><span class="num">13</span> Contact</h2>
-      <p>Questions about these Terms? Email us at
+</section>
+<section id="terms-13">
+<h2>13. Contact</h2>
+<p>Questions about these Terms? Email us at
       <a href="mailto:coding2020@gmail.com">coding2020@gmail.com</a>.</p>
-    </section>
-  </section>
-</main>
+</section>
+    </article>
+  </main>
+
+  <aside class="toc" aria-label="On this page">
+    <p class="t">On this page</p>
+    <nav data-for="privacy"><a href="#privacy-1" data-id="privacy-1">1. Who we are and what this policy covers</a><a href="#privacy-2" data-id="privacy-2">2. Information we collect</a><a href="#privacy-3" data-id="privacy-3">3. How we use your information</a><a href="#privacy-4" data-id="privacy-4">4. We do not sell your data</a><a href="#privacy-5" data-id="privacy-5">5. Who we share information with</a><a href="#privacy-6" data-id="privacy-6">6. Storage, security and retention</a><a href="#privacy-7" data-id="privacy-7">7. Your choices and rights</a><a href="#privacy-8" data-id="privacy-8">8. Browser permissions and why we ask for them</a><a href="#privacy-9" data-id="privacy-9">9. Google user data (Limited Use)</a><a href="#privacy-10" data-id="privacy-10">10. Children&rsquo;s privacy</a><a href="#privacy-11" data-id="privacy-11">11. Changes to this policy</a><a href="#privacy-12" data-id="privacy-12">12. Contact</a></nav>
+    <nav data-for="terms" hidden><a href="#terms-1" data-id="terms-1">1. Acceptance of terms</a><a href="#terms-2" data-id="terms-2">2. What the Service does</a><a href="#terms-3" data-id="terms-3">3. Your account</a><a href="#terms-4" data-id="terms-4">4. Your data and privacy</a><a href="#terms-5" data-id="terms-5">5. Your responsibilities</a><a href="#terms-6" data-id="terms-6">6. AI-generated content and financial figures</a><a href="#terms-7" data-id="terms-7">7. Acceptable use</a><a href="#terms-8" data-id="terms-8">8. No warranty</a><a href="#terms-9" data-id="terms-9">9. Limitation of liability</a><a href="#terms-10" data-id="terms-10">10. Third-party marketplaces</a><a href="#terms-11" data-id="terms-11">11. Changes to the Service or these terms</a><a href="#terms-12" data-id="terms-12">12. Termination</a><a href="#terms-13" data-id="terms-13">13. Contact</a></nav>
+  </aside>
+</div>
 
 <footer>
-  <p>© 2026 Rocket Listing. We do not sell your personal data.</p>
-  <p><a href="#privacy" data-target="privacy" class="footlink">Privacy Policy</a> · <a href="#terms" data-target="terms" class="footlink">Terms &amp; Conditions</a></p>
+  <p>© 2026 Rocket Listing. We do not sell your personal data. Questions? <a href="mailto:coding2020@gmail.com">coding2020@gmail.com</a></p>
 </footer>
 
 <script>
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const panels = { privacy: document.getElementById('privacy'), terms: document.getElementById('terms') };
+  const articles = { privacy: document.getElementById('privacy'), terms: document.getElementById('terms') };
+  const tocs = { privacy: document.querySelector('.toc nav[data-for="privacy"]'), terms: document.querySelector('.toc nav[data-for="terms"]') };
+  let current = 'privacy';
+  let spy = null;
 
-  function activate(target) {
-    tabButtons.forEach(b => b.classList.toggle('active', b.dataset.target === target));
-    Object.entries(panels).forEach(([key, el]) => el.classList.toggle('active', key === target));
-    history.replaceState(null, '', '#' + target);
+  function docOf(hash) {
+    const h = (hash || '').replace('#', '');
+    return h.startsWith('terms') ? 'terms' : 'privacy';
   }
 
-  tabButtons.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.target)));
-  document.querySelectorAll('.footlink').forEach(a => a.addEventListener('click', (e) => {
-    e.preventDefault();
-    activate(a.dataset.target);
-    window.scrollTo({top:0, behavior:'smooth'});
-  }));
+  function setActive(doc) {
+    current = doc;
+    Object.entries(articles).forEach(([k, el]) => el.classList.toggle('active', k === doc));
+    Object.entries(tocs).forEach(([k, el]) => (el.hidden = k !== doc));
+    document.querySelectorAll('[data-doc]').forEach(a => a.classList.toggle('active', a.dataset.doc === doc));
+    document.title = (doc === 'terms' ? 'Terms & Conditions' : 'Privacy Policy') + ' — Rocket Listing';
+    observe();
+  }
 
-  const initial = window.location.hash.replace('#','');
-  if (initial === 'terms') activate('terms');
+  function observe() {
+    if (spy) spy.disconnect();
+    const heads = articles[current].querySelectorAll('section[id]');
+    const links = tocs[current].querySelectorAll('a');
+    spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.toggle('active', l.dataset.id === e.target.id));
+        }
+      });
+    }, { rootMargin: '-90px 0px -65% 0px' });
+    heads.forEach(h => spy.observe(h));
+    if (!links.length) return;
+    links.forEach((l, i) => l.classList.toggle('active', i === 0));
+  }
+
+  function route() {
+    const hash = window.location.hash;
+    const doc = docOf(hash);
+    const changed = doc !== current || !articles[doc].classList.contains('active');
+    if (changed) setActive(doc);
+    const target = hash && document.getElementById(hash.slice(1));
+    if (target && target.tagName === 'SECTION') target.scrollIntoView();
+    else if (changed) window.scrollTo(0, 0);
+  }
+
+  window.addEventListener('hashchange', route);
+  setActive(docOf(window.location.hash));
+  route();
 </script>
 
 </body>
